@@ -1,0 +1,153 @@
+@charset "utf-8";
+
+/*레이아웃 영역 */
+#mNav {display: none; position: absolute; top: 12px; left: 20px;}
+#header {width: 100%; border-bottom: 1px solid #c6c6c6;}
+#menu {width: 100%;}
+#banner {position: relative;}
+
+/* 가운데 영역 */
+.container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0);}
+
+/* 로우 영역 */
+.row {padding: 0 28px;}
+
+/* 모바일 메뉴 */
+.ham {display: block; width: 25px; height: 10px; background: rgba(0,0,0,0); padding: 15px 10px 10px 10px;}
+.ham span {position: relative; display: block; width: 25px; height: 4px; background: #39106a; outline-width: 20px;}
+.ham span::before {
+    content:'';
+    width: 25px; height: 4px; background: #39106a;
+    position: absolute; left: 0; bottom: -7px;
+}
+.ham span::after {
+    content:'';
+    width: 25px; height: 4px; background: #39106a;
+    position: absolute; left: 0; top: -7px;
+}
+
+/* 헤더 영역 */
+.header h1 {float: left; position: relative;}
+.header h1 em {padding: 6px 6px 3px 0px; display: inline-block;}
+.header h1 em img {width: 45px;}
+.header h1 strong {display: block; position: absolute; left: 45px; top: 4px;}
+.header h1 strong img {width: 150px;}
+.header .nav {float: right;}
+.header .nav ul li {float: left; width: 103px; text-align: center;}
+.header .nav ul li a {display: block; padding: 14px 10px; font-size: 17px; font-weight: 700; color: #444;}
+.header .nav ul li.partnership {margin-top: 7px; margin-right: 10px;}
+.header .nav ul li.partnership a {width: 70px; background-color: #ff3366; color: #fff; padding: 5px 30px 7px 30px; display: inline-block; border: 1px solid #ff3360; border-radius: 8px;}
+.header .nav ul li.partnership a:hover {}
+
+/* 메뉴 영역 */
+.menu .nav ul {position: relative; display: table; margin-left: auto; margin-right: auto; border-left: 1px solid #c6c6c6;}
+.menu .nav ul li {float: left; width: 200px; text-align: center; border-right: 1px solid #c6c6c6;}
+.menu .nav ul li a {display: block; padding: 14px 10px; font-size: 17px; font-weight: 700; color: #444; transition: all 0.3s;}
+.menu .nav ul li a:hover {color: #ff3366; border-bottom: 3px solid #ff3366; padding-bottom: 7px;}
+
+/* 배너 */
+.banner_menu {overflow: hidden; position: absolute; left: 0; top: 20px; width: 100%; height: 100px; z-index: 10;}
+.banner_menu a {color: #fff; font-size: 16px; transition: all 0.3s;}
+.banner_menu a:hover {color: #c1c1c1;}
+.banner_menu .bm_left {float: left;}
+.banner_menu .bm_left ul {padding-top: 7px;}
+.banner_menu .bm_left li {display: inline; position: relative; margin-right: 30px;}
+.banner_menu .bm_left li.total {margin-right: 20px;}
+.banner_menu .bm_left li.total a {font-size: 14px; padding: 3px 10px; display: inline-block; border: 1px solid #fff; transition: all 0.3s;}
+.banner_menu .bm_left li.total a:hover {background: #fff; border-color: #000; color: #000;}
+.banner_menu .bm_right {float: right; overflow: hidden;}
+.banner_menu .bm_right ul {float: left;}
+.banner_menu .bm_right ul:first-child {padding-top: 7px;}
+.banner_menu .bm_right li {position: relative; display: inline; text-align: center; margin-right: 20px;}
+.banner_menu .bm_right li.line {margin-right: 30px;}
+.banner_menu .bm_right li.white {margin-right: 10px;}
+.banner_menu .bm_right li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #fff;}
+.banner_menu .bm_right li.purple {margin-right: 0;}
+.banner_menu .bm_right li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #6e40c4;}
+.banner_menu li.line:after {content:''; width: 1px; height: 14px; background: #fff; position: absolute; right: -18px; top: 2px;}
+
+/* 슬라이드 */
+.slider {width: 100%; height: 600px;}
+.slider .ss1 {background: url(../img/main_slider01.jpg) no-repeat center center; background-size: cover;}
+.slider .ss2 {background: url(../img/main_slider02.jpg) no-repeat center center; background-size: cover;}
+.slider .ss3 {background: url(../img/main_slider03.jpg) no-repeat center center; background-size: cover;}
+.slider .swiper-slide h2 {position: relative; display: inline-block; font-size: 62px; line-height: 70px; color: #fff; margin-top: 200px;}
+.slider .swiper-slide h2:after {content: ''; width: 100%; height: 1px; background: rgba(255,255,255,0.3); position: absolute; left: 0; bottom: -35px;}
+.slider .swiper-slide h2 em {display: block; font-size: 59px; font-weight: 100;}
+.slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 55px;}
+
+/* 퍼블릭(공고리스트) */
+.public {padding: 100px 0;}
+.public_title {margin-bottom: 60px;}
+.public_title ul {overflow: hidden; width: 848px; margin: 0 auto;}
+.public_title li {float: left; width: 210px; text-align: center; border: 1px solid #c4c4c4; margin-right: -1px;}
+.public_title li a {display: block; padding: 15px 0; font-size: 18px; color: 666px; font-weight: 700;}
+.public_title li.active a {background: #666; color: #fff;}
+.public_chart {}
+.public_chart > div {}
+.public_chart > div > div {display: inline-block; width: 350px; height: 592px; border: 1px solid #c4c4c4;}
+.public_chart > div > div .poster {}
+.public_chart > div > div .poster img {display: block;}
+.public_chart > div > div .infor {}
+.public_chart > div > div .infor h3 {}
+.public_chart > div > div .infor h3 em {}
+.public_chart > div > div .infor h3 strong {}
+.public_chart > div > div .infor h4 {}
+.public_chart > div > div .infor h4 em {}
+.public_chart > div > div .infor h4 strong {}
+
+
+/* 미디어쿼리 */
+@media (max-width: 1290px){
+    .container {width: 100%;}
+    .row {padding: 0 24px;}
+    .menu .nav ul li {width: 155px;}
+
+    .swiper-button-prev, .swiper-button-next {display: none;}
+}
+
+@media (max-width: 1024px){
+    #mNav {display: block;}
+    .menu {display: none;}
+    .row {padding: 0 20px;}
+    .header h1 {float: none; text-align: center;}
+    .header h1 strong {display: none;}
+
+    .banner_menu .bm_left ul {display: none;}
+    .banner_menu .bm_right ul:first-child {display: none;}
+}
+
+@media (max-width: 960px){
+    .slider {height: 500px;}
+    .slider .swiper-slide h2 {margin-top: 170px; font-size: 37px; line-height: 45px;}
+    .slider .swiper-slide h2:after {bottom: -15px;}
+    .slider .swiper-slide h2 em {font-size: 34px;}
+    .slider .swiper-slide p {font-size: 16px; padding-top: 35px;}
+
+}
+
+@media (max-width: 768px){
+    #mNav {display: block;}
+    .row {padding: 0 16px;}
+    .header .nav ul li.partnership a {width: 60px; padding: 3px 20px;}
+}
+
+@media (max-width: 600px){
+    .slider {height: 400px;}
+    .slider .swiper-slide h2 {margin-top: 140px; font-size: 24px; line-height: 30px;}
+    .slider .swiper-slide h2:after {bottom: -5px;}
+    .slider .swiper-slide h2 em {font-size: 20px;}
+    .slider .swiper-slide p {font-size: 14px; padding-top: 25px;}
+
+    .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+    .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+}
+
+@media (max-width: 480px){
+
+}
+
+@media (max-width: 320px){
+
+}
+
