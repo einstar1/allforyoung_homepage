@@ -5,6 +5,7 @@
 #header {width: 100%; border-bottom: 1px solid #c6c6c6;}
 #menu {width: 100%;}
 #banner {position: relative;}
+#public {width: 100%; background: #f8f8f8;}
 
 /* 가운데 영역 */
 .container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0);}
@@ -75,19 +76,20 @@
 .public {padding: 100px 0;}
 .public_title {margin-bottom: 25px; border-bottom: 1px solid #c6c6c6;}
 .public_title h2 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
-.public_chart {height: 592px;}
-.public_chart > div {}
-.public_chart > div > div {display: inline-block; width: 350px; height: 592px; margin-right: 84px;}
-.public_chart > div > div .poster {}
-.public_chart > div > div .poster img {display: block;}
-.public_chart > div > div .infor {background: #fff; padding: 17px; border: 1px solid #d9d9d9;}
-.public_chart > div > div .infor h3 {color: #333; font-size: 18px; font-weight: 700; margin-bottom: 14px;}
-.public_chart > div > div .infor h3 em {}
-.public_chart > div > div .infor h3 strong {float: right; color: #ff3366;}
-.public_chart > div > div .infor h4 {color: #c1c1c1; font-size: 12px; font-weight: 500;}
-.public_chart > div > div .infor h4 em {}
-.public_chart > div > div .infor h4 strong {float: right;}
-.public_chart > div > div .infor_tag a {display: inline-block; background: #fff; font-size: 18px; color: #ff3366; border: 1px solid #ff3360; border-radius: 7px; padding: 3px 10px; margin-top: 13px; margin-right: 5px;}
+.public_chart {}
+.public_chart > div {display: inline-block; position: relative; text-align: center;}
+.public_chart > div > .lightbox {display: inline-block; width: 350px; height: 592px; margin-right: 78px;}
+.public_chart > div > .lightbox:nth-child(3n) {margin-right: 0px;}
+.public_chart > div > .lightbox .poster {border: 1px solid #d9d9d9;}
+.public_chart > div > .lightbox .poster img {display: block;}
+.public_chart > div > .lightbox .infor {background: #fff; padding: 17px; border: 1px solid #d9d9d9;}
+.public_chart > div > .lightbox .infor h3 {color: #333; font-size: 18px; font-weight: 700; margin-bottom: 14px;}
+.public_chart > div > .lightbox .infor h3 em {}
+.public_chart > div > .lightbox .infor h3 strong {float: right; color: #ff3366;}
+.public_chart > div > .lightbox .infor h4 {color: #c1c1c1; font-size: 12px; font-weight: 500;}
+.public_chart > div > .lightbox .infor h4 em {}
+.public_chart > div > .lightbox .infor h4 strong {float: right;}
+.public_chart > div > .lightbox .infor_tag a {display: inline-block; background: #fff; font-size: 18px; color: #ff3366; border: 1px solid #ff3360; border-radius: 7px; padding: 3px 10px; margin-top: 13px; margin-right: 5px;}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
