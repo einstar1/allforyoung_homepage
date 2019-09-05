@@ -37,59 +37,60 @@
 .header .nav ul li {float: left; width: 103px; text-align: center;}
 .header .nav ul li a {display: block; padding: 14px 10px; font-size: 17px; font-weight: 700; color: #444;}
 .header .nav ul li.partnership {margin-top: 7px; margin-right: 10px;}
-.header .nav ul li.partnership a {width: 70px; background-color: #ff3366; color: #fff; padding: 5px 30px 7px 30px; display: inline-block; border: 1px solid #ff3360; border-radius: 8px;}
+.header .nav ul li.partnership a {width: 70px; background-color: #ff3469; color: #fff; padding: 5px 30px 7px 30px; display: inline-block; border: 1px solid #ff3360; border-radius: 8px;}
 .header .nav ul li.partnership a:hover {}
 
 /* 메뉴 영역 */
 .menu .nav ul {position: relative; display: table; margin-left: auto; margin-right: auto;}
-.menu .nav ul li {float: left; width: 200px; text-align: center;}
+.menu .nav ul li {float: left; width: 175px; text-align: center;}
 .menu .nav ul li a {display: block; padding: 14px 10px; font-size: 17px; font-weight: 700; color: #444; transition: all 0.3s;}
-.menu .nav ul li.active a {color: #ff3366; border-bottom: 3px solid #ff3366; padding-bottom: 7px;}
-.menu .nav ul li a:hover {color: #ff3366; border-bottom: 3px solid #ff3366; padding-bottom: 7px;}
+.menu .nav ul li.active a {color: #ff3469; border-bottom: 3px solid #ff3469; padding-bottom: 7px;}
+.menu .nav ul li a:hover {color: #ff3469; border-bottom: 3px solid #ff3469; padding-bottom: 7px;}
 
 /* 배너 */
-.banner_menu {overflow: hidden; position: absolute; left: 0; top: 20px; width: 100%; height: 100px; z-index: 10;}
+.banner_menu {overflow: hidden; position: absolute; left: 0; bottom: 42px; width: 100%; height: 60px; z-index: 10;}
 .banner_menu a {color: #fff; font-size: 16px; transition: all 0.3s;}
 .banner_menu a:hover {color: #c1c1c1;}
-.banner_menu .bm_right {float: right; overflow: hidden;}
-.banner_menu .bm_right ul {float: left;}
-.banner_menu .bm_right ul:first-child {padding-top: 7px;}
-.banner_menu .bm_right li {position: relative; display: inline; text-align: center; margin-right: 20px;}
-.banner_menu .bm_right li.line {margin-right: 30px;}
-.banner_menu .bm_right li.white {margin-right: 10px;}
-.banner_menu .bm_right li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #fff;}
-.banner_menu .bm_right li.purple {margin-right: 0;}
-.banner_menu .bm_right li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #6e40c4;}
+.banner_menu .bm_left {float: left; overflow: hidden;}
+.banner_menu .bm_left ul {float: left;}
+.banner_menu .bm_left ul:first-child {padding-top: 7px;}
+.banner_menu .bm_left li {position: relative; display: inline; text-align: center; margin-right: 20px;}
+.banner_menu .bm_left li.line {margin-right: 30px;}
+.banner_menu .bm_left li.white {margin-right: 10px;}
+.banner_menu .bm_left li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #fff;}
+.banner_menu .bm_left li.purple {margin-right: 0;}
+.banner_menu .bm_left li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #6e40c4;}
 .banner_menu li.line:after {content:''; width: 1px; height: 14px; background: #fff; position: absolute; right: -18px; top: 2px;}
 
 /* 슬라이드 */
-.slider {width: 100%; height: 600px;}
+.slider {width: 100%; height: 420px; overflow: hidden;}
 .slider .ss1 {background: url(../img/main_slider01.jpg) no-repeat center center; background-size: cover;}
 .slider .ss2 {background: url(../img/main_slider02.jpg) no-repeat center center; background-size: cover;}
 .slider .ss3 {background: url(../img/main_slider03.jpg) no-repeat center center; background-size: cover;}
-.slider .swiper-slide h2 {position: relative; display: inline-block; font-size: 62px; line-height: 70px; color: #fff; margin-top: 200px;}
-.slider .swiper-slide h2:after {content: ''; width: 100%; height: 1px; background: rgba(255,255,255,0.3); position: absolute; left: 0; bottom: -35px;}
-.slider .swiper-slide h2 em {display: block; font-size: 59px; font-weight: 100;}
-.slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 55px;}
+.slider .swiper-slide h2 {position: relative; display: inline-block; font-size: 50px; line-height: 55px; color: #fff; margin-top: 107px;}
+.slider .swiper-slide h2:after {content: ''; width: 100%; height: 1px; background: rgba(255,255,255,0.3); position: absolute; left: 0; bottom: -27px;}
+.slider .swiper-slide h2 em {display: block; font-size: 45px; font-weight: 100;}
+.slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 40px;}
 
 /* 퍼블릭(공고리스트) */
 .public {padding: 100px 0;}
 .public_title {margin-bottom: 25px; border-bottom: 1px solid #c6c6c6;}
 .public_title h2 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
 .public_chart {}
-.public_chart > div {display: inline-block; position: relative; text-align: center;}
-.public_chart > div > .lightbox {display: inline-block; width: 350px; height: 592px; margin-right: 78px;}
-.public_chart > div > .lightbox:nth-child(3n) {margin-right: 0px;}
+.public_chart > div {display: block; position: relative; text-align: center;}
+.public_chart > div > .lightbox {display: inline-block; padding:0; width: 350px; height: 592px; margin: 0 25px;}
+.public_chart > div > .lightbox .box:hover {box-shadow: 0 2px 4px;}
 .public_chart > div > .lightbox .poster {border: 1px solid #d9d9d9;}
 .public_chart > div > .lightbox .poster img {display: block;}
-.public_chart > div > .lightbox .infor {background: #fff; padding: 17px; border: 1px solid #d9d9d9;}
+.public_chart > div > .lightbox .infor {background: #fff; padding: 17px; border: 1px solid #d9d9d9; text-align: left;}
 .public_chart > div > .lightbox .infor h3 {color: #333; font-size: 18px; font-weight: 700; margin-bottom: 14px;}
 .public_chart > div > .lightbox .infor h3 em {}
-.public_chart > div > .lightbox .infor h3 strong {float: right; color: #ff3366;}
+.public_chart > div > .lightbox .infor h3 strong {float: right; color: #ff3469;}
 .public_chart > div > .lightbox .infor h4 {color: #c1c1c1; font-size: 12px; font-weight: 500;}
 .public_chart > div > .lightbox .infor h4 em {}
 .public_chart > div > .lightbox .infor h4 strong {float: right;}
-.public_chart > div > .lightbox .infor_tag a {display: inline-block; background: #fff; font-size: 18px; color: #ff3366; border: 1px solid #ff3360; border-radius: 7px; padding: 3px 10px; margin-top: 13px; margin-right: 5px;}
+.public_chart > div > .lightbox .infor_tag a {display: inline-block; background: #fff; font-size: 18px; color: #ff3469; border: 1px solid #ff3360; border-radius: 7px; padding: 3px 10px; margin-top: 13px; margin-right: 5px; transition: all 0.3s;}
+.public_chart > div > .lightbox .infor_tag a:hover {color: #fff; background: #ff3469;}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
@@ -110,30 +111,23 @@
 }
 
 @media (max-width: 960px){
-    .slider {height: 500px;}
-    .slider .swiper-slide h2 {margin-top: 170px; font-size: 37px; line-height: 45px;}
+    .slider {height: 410px;}
+    .slider .swiper-slide h2 {margin-top: 140px; font-size: 37px; line-height: 40px;}
     .slider .swiper-slide h2:after {bottom: -15px;}
     .slider .swiper-slide h2 em {font-size: 34px;}
     .slider .swiper-slide p {font-size: 16px; padding-top: 35px;}
 
 }
 
-@media (max-width: 768px){
-    #mNav {display: block;}
-    .row {padding: 0 16px;}
-    .header .nav ul li a {font-size: 15px; padding: 10px 7px;}
-    .header .nav ul li.partnership a {width: 60px; padding: 3px 18px; }
-}
-
 @media (max-width: 600px){
     .slider {height: 400px;}
-    .slider .swiper-slide h2 {margin-top: 140px; font-size: 24px; line-height: 30px;}
+    .slider .swiper-slide h2 {margin-top: 180px; font-size: 24px; line-height: 30px;}
     .slider .swiper-slide h2:after {bottom: -5px;}
     .slider .swiper-slide h2 em {font-size: 20px;}
     .slider .swiper-slide p {font-size: 14px; padding-top: 25px;}
 
-    .banner_menu .bm_right li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
-    .banner_menu .bm_right li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+    .banner_menu .bm_left li.white a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
+    .banner_menu .bm_left li.purple a {font-size: 14px; padding: 3px 5px 5px 5px; color: #fff; background: rgba(0,0,0,0.6); border-color: #fff;}
     .swiper-paginaton-bullet {width:13px !important; height: 13px !important;}
 }
 
