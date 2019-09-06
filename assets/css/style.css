@@ -2,10 +2,10 @@
 
 /*레이아웃 영역 */
 #mNav {display: none; position: absolute; top: 12px; left: 20px;}
-#header {width: 100%; border-bottom: 1px solid #c6c6c6;}
+#header {width: 100%; border-bottom: 1px solid #f0f2f5;}
 #menu {width: 100%;}
 #banner {position: relative;}
-#public {width: 100%; background: #f8f8f8;}
+#public {width: 100%; background: #fff;}
 
 /* 가운데 영역 */
 .container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0);}
@@ -73,28 +73,29 @@
 .slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 40px;}
 
 /* 퍼블릭(공고리스트) */
+.container_public {position: relative; width: 1112px; margin: 0 auto; background: rgba(0,0,0,0);}
 .public {padding: 100px 0;}
-.public_title {margin-bottom: 25px; border-bottom: 1px solid #c6c6c6;}
+.public_title {margin-bottom: 25px; border-bottom: 1px solid #f0f2f5;}
 .public_title h2 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
 .public_chart {}
 .public_chart > div {display: block; position: relative; text-align: center;}
-.public_chart > div > .lightbox {display: inline-block; padding:0; width: 350px; height: 592px; margin: 0 25px;}
+.public_chart > div > .lightbox {display: inline-block; padding:0; width: 300px; height: 460px; margin: 0 25px;}
 .public_chart > div > .lightbox .box:hover {box-shadow: 0 2px 4px;}
-.public_chart > div > .lightbox .poster {border: 1px solid #d9d9d9;}
-.public_chart > div > .lightbox .poster img {display: block;}
-.public_chart > div > .lightbox .infor {background: #fff; padding: 17px; border: 1px solid #d9d9d9; text-align: left;}
-.public_chart > div > .lightbox .infor h3 {color: #333; font-size: 18px; font-weight: 700; margin-bottom: 14px;}
+.public_chart > div > .lightbox .poster {}
+.public_chart > div > .lightbox .poster img {display: block; border-radius: 4px;}
+.public_chart > div > .lightbox .infor {background: #fff; padding: 17px 8px; text-align: left;}
+.public_chart > div > .lightbox .infor h3 {color: #333; font-size: 18px; font-weight: 700; margin-bottom: 5px;}
 .public_chart > div > .lightbox .infor h3 em {}
 .public_chart > div > .lightbox .infor h3 strong {float: right; color: #ff3469;}
-.public_chart > div > .lightbox .infor h4 {color: #c1c1c1; font-size: 12px; font-weight: 500;}
-.public_chart > div > .lightbox .infor h4 em {}
-.public_chart > div > .lightbox .infor h4 strong {float: right;}
-.public_chart > div > .lightbox .infor_tag a {display: inline-block; background: #fff; font-size: 18px; color: #ff3469; border: 1px solid #ff3360; border-radius: 7px; padding: 3px 10px; margin-top: 13px; margin-right: 5px; transition: all 0.3s;}
-.public_chart > div > .lightbox .infor_tag a:hover {color: #fff; background: #ff3469;}
+.public_chart > div > .lightbox .infor h4 {color: #c1c1c1; font-size: 12px; font-weight: 500; border-bottom: 3px solid #ff3469; padding: 0 0 8px;}
+.public_chart > div > .lightbox .infor_tag a {display: inline-block; font-size: 15px; color: #ff3469; padding: 3px 1px; margin-top: 1px; margin-right: 5px;}
+.public_banner {width: 100%; height: 85px; overflow: hidden;}
+.public_banner .ss1 {background: url(../img/public_slider01.jpg) no-repeat center center; background-size: cover;}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
     .container {width: 100%;}
+    .container_public {width: 100%;}
     .row {padding: 0 24px;}
     .menu .nav ul li {width: 155px;}
 
