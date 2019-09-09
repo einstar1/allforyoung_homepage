@@ -50,6 +50,13 @@
                         <h2 class="ir_so">요즘것들 전체메뉴</h2>
                         <a href="#" class="ham"><span></span></a>
                     </nav>
+                    <div class="cntr">
+                        <div class="cntr-innr">
+                          <label class="search" for="inpt_search">
+                                <input class="inpt_search" type="text" />
+                            </label>
+                        </div>
+                    </div>
                     <!-- //search  -->
                     <nav class="nav">
                         <ul class="clearfix">
@@ -84,20 +91,6 @@
     <!--  //menu  -->
 
     <section id="banner">
-        <h2 class="ir_so">최신 활동 소식</h2>
-        <div class="banner_menu">
-            <div class="container">
-                <div class="row">
-                    <div class="bm_left">
-                        <ul>
-                            <li class="white"><a href="#">지원하기</a></li>
-                            <li class="pink"><a href="#">게시판</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -108,6 +101,19 @@
                                 <p>지구를 살릴 사람을 찾습니다</p>
                             </div>
                         </div>
+                        <h2 class="ir_so">슬라이드 메뉴</h2>
+                        <div class="banner_menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="bm_left">
+                                        <ul>
+                                            <li class="white"><a href="http://www.ecostartup.kr/" target="_blank">지원하기</a></li>
+                                            <li class="pink"><a href="#">게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide ss2">
                         <div class="container">
@@ -116,12 +122,38 @@
                                 <p>아이들의 선생님이 되어주세요</p>
                             </div>
                         </div>
+                        <h2 class="ir_so">슬라이드 메뉴</h2>
+                        <div class="banner_menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="bm_left">
+                                        <ul>
+                                            <li class="white"><a href="http://www.hopestudy.co.kr/" target="_blank">지원하기</a></li>
+                                            <li class="pink"><a href="#">게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-slide ss3">
-                         <div class="container">
+                        <div class="container">
                             <div class="row">
                                 <h2>KOICA <em>국민서포터즈</em></h2>
                                 <p>WEKO 모여라</p>
+                            </div>
+                        </div>
+                        <h2 class="ir_so">슬라이드 메뉴</h2>
+                        <div class="banner_menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="bm_left">
+                                        <ul>
+                                            <li class="white"><a href="http://www.koicaweko.co.kr/" target="_blank">지원하기</a></li>
+                                            <li class="pink"><a href="#">게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -880,6 +912,16 @@
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/lightgallery.min.js"></script>
     <script>
+
+        //검색
+        $("#inpt_search").on('focus', function () {
+            $(this).parent('label').addClass('active');
+        });
+        
+        $("#inpt_search").on('blur', function () {
+            if($(this).val().length == 0)
+                $(this).parent('label').removeClass('active');
+        });
 
         //공고 리스트(public_chart)
         $(".chart_cont1").lightGallery({
