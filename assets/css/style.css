@@ -6,9 +6,11 @@
 #menu {width: 100%;}
 #banner {position: relative;}
 #public {width: 100%; background: #fff;}
+#footer {background: #211f1f;}
 
 /* 가운데 영역 */
 .container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0);}
+.container_public {position: relative; width: 1112px; margin: 0 auto; background: rgba(0,0,0,0);}
 
 /* 로우 영역 */
 .row {padding: 0 28px;}
@@ -31,14 +33,16 @@
 .header h1 {float: left; position: relative;}
 .header h1 em {padding: 6px 6px 3px 0px; display: inline-block;}
 .header h1 em img {width: 45px;}
-.header h1 strong {display: block; position: absolute; left: 45px; top: 4px;}
+.header h1 strong {display: inline-block; position: absolute; left: 45px; top: 4px;}
 .header h1 strong img {width: 150px;}
 .header .nav {float: right;}
 .header .nav ul li {float: left; width: 103px; text-align: center;}
-.header .nav ul li a {display: block; padding: 14px 10px; font-size: 17px; font-weight: 700; color: #444;}
+.header .nav ul li a {display: inline-block; padding: 14px 10px; font-size: 17px; font-weight: 700; color: #444;}
 .header .nav ul li.partnership {margin-top: 7px; margin-right: 10px;}
 .header .nav ul li.partnership a {width: 70px; background-color: #ff3469; color: #fff; padding: 5px 30px 7px 30px; display: inline-block; border: 1px solid #ff3360; border-radius: 8px;}
 .header .nav ul li.partnership a:hover {}
+
+/* 검색 영역 */
 
 /* 메뉴 영역 */
 .menu .nav ul {position: relative; display: table; margin-left: auto; margin-right: auto;}
@@ -57,9 +61,9 @@
 .banner_menu .bm_left li {position: relative; display: inline; text-align: center; margin-right: 20px;}
 .banner_menu .bm_left li.line {margin-right: 30px;}
 .banner_menu .bm_left li.white {margin-right: 10px;}
-.banner_menu .bm_left li.white a {width: 80px; background-color: #fff; color: #3a0e6a; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #fff;}
-.banner_menu .bm_left li.purple {margin-right: 0;}
-.banner_menu .bm_left li.purple a {width: 80px; background-color: #3a0e6a; color: #fff; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #6e40c4;}
+.banner_menu .bm_left li.white a {width: 80px; background-color: #fff; color: #ff3469; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #fff; border-radius: 13px;}
+.banner_menu .bm_left li.pink {margin-right: 0;}
+.banner_menu .bm_left li.pink a {width: 80px; background-color: #ff3469; color: #fff; padding: 7px 30px 9px 30px; display: inline-block; border: 1px solid #ff3460; border-radius: 13px;}
 .banner_menu li.line:after {content:''; width: 1px; height: 14px; background: #fff; position: absolute; right: -18px; top: 2px;}
 
 /* 슬라이드 */
@@ -72,14 +76,26 @@
 .slider .swiper-slide h2 em {display: block; font-size: 45px; font-weight: 100;}
 .slider .swiper-slide p {font-size: 27px; color: #fff; padding-top: 40px;}
 
+/* 스토리 광고*/
+.story {padding: 30px 0;}
+.story_title {margin-bottom: 25px; border-bottom: 1px solid #f0f2f5;}
+.story_title h2 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
+.story_chart {display: block; position: relative; text-align: center;}
+.story_chart > .storycircle {overflow: hidden; padding: 0; margin: 0 45px;}
+.story_chart > div {display:inline-block;}
+.story_chart > div > .circle .symbol {width: 60px; height: 60px; border: 4px solid #ff3469; border-radius: 50%;}
+.story_chart > div > .circle .symbol img {display: block;}
+.story_chart > div > .circle .name h4 {font-size: 14px; font-weight: 500; color: #000;}
+.story-button-prev,
+.story-button-next { position: absolute; top: 50%; width: 27px; height: 44px; margin-top: -22px; z-index: 10; cursor: pointer; background-size: 27px 44px; background-position: center; background-repeat: no-repeat;}
+
 /* 퍼블릭(공고리스트) */
-.container_public {position: relative; width: 1112px; margin: 0 auto; background: rgba(0,0,0,0);}
 .public {padding: 100px 0;}
 .public_title {margin-bottom: 25px; border-bottom: 1px solid #f0f2f5;}
 .public_title h2 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
 .public_chart {}
 .public_chart > div {display: block; position: relative; text-align: center;}
-.public_chart > div > .lightbox {display: inline-block; padding:0; width: 300px; height: 460px; margin: 0 25px;}
+.public_chart > div > .lightbox {display: inline-block; padding:0; width: 300px; margin: 25px 25px;}
 .public_chart > div > .lightbox .box:hover {box-shadow: 0 2px 4px;}
 .public_chart > div > .lightbox .poster {}
 .public_chart > div > .lightbox .poster img {display: block; border-radius: 4px;}
@@ -89,8 +105,29 @@
 .public_chart > div > .lightbox .infor h3 strong {float: right; color: #ff3469;}
 .public_chart > div > .lightbox .infor h4 {color: #c1c1c1; font-size: 12px; font-weight: 500; border-bottom: 3px solid #ff3469; padding: 0 0 8px;}
 .public_chart > div > .lightbox .infor_tag a {display: inline-block; font-size: 15px; color: #ff3469; padding: 3px 1px; margin-top: 1px; margin-right: 5px;}
-.public_banner {width: 100%; height: 85px; overflow: hidden;}
+.public_banner {width: 100%; height: 85px; overflow: hidden; margin: 25px 0;}
 .public_banner .ss1 {background: url(../img/public_slider01.jpg) no-repeat center center; background-size: cover;}
+
+/* 푸터 */
+.footer_infor {padding: 40px 0; width: 80%;}
+.footer_infor h2 img {width: 150px;}
+.footer_infor ul {padding: 15px 0;}
+.footer_infor li {position: relative; display: inline; padding-right: 16px; white-space: nowrap;}
+.footer_infor li:after {content: ''; position: absolute; right: 5px; top: 5px; width: 1px; height: 11px; background: #8f8f8f;}
+.footer_infor li:last-child:after {width: 0; height: 0;}
+.footer_infor li a {color: #8f8f8f;}
+.footer_infor address p {color: #8f8f8f; padding-bottom: 15px;}
+
+/* 트레일러 */
+.overlay {background: rgba(0, 0, 0, .92); display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 10000}
+.modal {position: absolute}
+.modal_close {
+    background: url(../img/close.svg) no-repeat; background-size: 32px 32px; 
+    border: 0; color: transparent; 
+    display: block; width: 32px; height: 32px; overflow: hidden;
+    position: absolute; top: 24px; right: 24px; text-indent: 100%;
+}
+body.modal_on {overflow: hidden;}
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){
