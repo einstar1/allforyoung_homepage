@@ -8,6 +8,8 @@
 #public {width: 100%; background: #fff;}
 #footer {background: #211f1f;}
 
+#intro {widows: 100%; height: 350px; background: #c1c1c1;}
+
 /* 가운데 영역 */
 .container {position: relative; width: 1280px; margin: 0 auto; background: rgba(0,0,0,0);}
 .container_public {position: relative; width: 1112px; margin: 0 auto; background: rgba(0,0,0,0);}
@@ -43,15 +45,34 @@
 .header .nav ul li.partnership a:hover {}
 
 /* 검색 영역 */
-.inpt_search {display: none;}
-.cntr{display: block; width:100%; height:100%;}
-.cntr-innr{text-align: center; vertical-align: middle;}
-.search {display: inline-block; position: relative; height: 35px; width: 35px; box-sizing: border-box; margin: 8px 8px 7px 0px; padding: 7px 9px 0px 9px; border: 3px solid #000; border-radius: 25px; transition: all 200ms ease; cursor: text;}
-.search:after {content: " "; position: absolute; width: 3px; height: 20px; right: -5px; top: 21px; background: #000; border-radius: 3px; transform: rotate(-45deg); transition: all 200ms ease;}
-.search:active,
-.search:hover {width: 200px; margin-right: 0px;}
-.search:hover:after	{height: 0px;}
-.input {width: 100%; border: none; box-sizing: border-box; font-size: 15px; color: inherit; background: transparent; outline-width: 0px;}
+.wrapper { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.input{ width: 250px; border: 3px solid #000; background: transparent; padding: 5px 20px; border-radius: 50px; outline: none; font-size: 15px; color: #000; font-weight: bold; letter-spacing: 1px;}
+.input::-webkit-input-placeholder { /* Chrome/Opera/Safari */  color: #000; font-family: Roboto; letter-spacing: 2px; text-transform: uppercase;}
+.input::-moz-placeholder { /* Firefox 19+ */ color: rgb(167, 150, 150);}
+.input:-ms-input-placeholder { /* IE 10+ */ color: #000;}
+.close-btn{ position: absolute; top: -11px; right: 25px; font-size: 35px; cursor: pointer; color: #000; opacity: 0; transition: opacity 0.5s ease;}
+.close-btn.active{ opacity: 1; animation: animate 0.5s linear;}
+
+/* 로그인 영역 */
+
+   
+@keyframes animate{
+    0%{
+      transform: scale(1);
+    }
+    25%{
+      transform: scale(1.2);
+    }
+    50%{
+      transform: scale(1.5);
+    }
+    75%{
+      transform: scale(1.2);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
 
 /* 메뉴 영역 */
 .menu .nav ul {position: relative; display: table; margin-left: auto; margin-right: auto;}
@@ -89,14 +110,17 @@
 .story {padding: 30px 0;}
 .story_title {margin-bottom: 25px; border-bottom: 1px solid #f0f2f5;}
 .story_title h2 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
-.story_chart {display: block; position: relative; text-align: center;}
+.story_chart {display: block; position: relative; text-align: center; width: 100%; height: 100%;}
 .story_chart > .storycircle {overflow: hidden; padding: 0; margin: 0 45px;}
 .story_chart > div {display:inline-block;}
+.story_chart > div > .circle {text-align: center;}
 .story_chart > div > .circle .symbol {width: 60px; height: 60px; border: 4px solid #ff3469; border-radius: 50%;}
 .story_chart > div > .circle .symbol img {display: block;}
 .story_chart > div > .circle .name h4 {font-size: 14px; font-weight: 500; color: #000;}
+.story-button-prev {left: 16px; right: auto; background: url(../img/button_prev.png);}
+.story-button-next {right: 16px; left: auto; background: url(../img/button_next.png);}
 .story-button-prev,
-.story-button-next { position: absolute; top: 50%; width: 27px; height: 44px; margin-top: -22px; z-index: 10; cursor: pointer; background-size: 27px 44px; background-position: center; background-repeat: no-repeat;}
+.story-button-next {position: absolute; top: 50%; width: 27px; height: 44px; z-index: 10; cursor: pointer; background-size: 27px 44px; background-position: center; background-repeat: no-repeat;}
 
 /* 퍼블릭(공고리스트) */
 .public {padding: 100px 0;}
@@ -137,6 +161,15 @@
     position: absolute; top: 24px; right: 24px; text-indent: 100%;
 }
 body.modal_on {overflow: hidden;}
+
+/* 제안서 다운받기, 문의하기 버튼 */
+.download_button {display: block; position: relative; text-align: center; top: 250px;}
+.download_button a {margin: 5px 15px;}
+.propose {width: 220px; height: 50px; background-color: #fff; box-shadow: 0 2px 4px; cursor: pointer;}
+.propose h3 {display: inline-block; font-size: 25px; font-weight: 700; color: #000;}
+.question {width: 220px; height: 50px; background-color: #ff3469; box-shadow: 0 2px 4px; cursor: pointer;}
+.question h3 {display: inline-block; font-size: 25px; font-weight: 700; color: #fff;}
+
 
 /* 미디어쿼리 */
 @media (max-width: 1290px){

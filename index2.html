@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/lightgallery.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
 
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="assets/icons/favicon.ico">
@@ -41,7 +42,7 @@
             <div class="row">
                 <div class="header clearfix">
                     <h1>
-                        <a href="#">
+                        <a href="index2.html">
                             <em><img src="assets/img/logo.png" alt="ALLFORYOUNG"></em>
                             <strong><img src="assets/img/logo_sub.png" alt="요즘것들"></strong>
                         </a>
@@ -50,18 +51,16 @@
                         <h2 class="ir_so">요즘것들 전체메뉴</h2>
                         <a href="#" class="ham"><span></span></a>
                     </nav>
-                    <div class="cntr">
-                        <div class="cntr-innr">
-                          <label class="search" for="inpt_search">
-                                <input class="inpt_search" type="text" />
-                            </label>
-                        </div>
+                    <div class="wrapper">
+                        <input type="text" class="input" placeholder="Search">
+                        <div class="close-btn">&times;</div>
                     </div>
                     <!-- //search  -->
                     <nav class="nav">
                         <ul class="clearfix">
-                            <li><a href="#">로그인</a></li>
-                            <li class="partnership"><a href="#">제휴문의</a></li>
+                            <li>
+                                <a href="#exampleModalCenter" class="btn-login" data-toggle="modal" data-target="#exampleModalCenter">로그인</a></li>
+                            <li class="partnership"><a href="manage.html">제휴문의</a></li>
                         </ul>
                     </nav>                    
                 </div>
@@ -69,6 +68,23 @@
         </div>
     </header>
     <!-- //header  -->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLongTitle">로그인</h2>
+        </div>
+        <div class="modal-body">
+            ...
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
     <section id="menu">
         <div class="container">
@@ -174,7 +190,7 @@
                     <div class="story_title">
                         <h2>요즘 할것들</h2>
                     </div>
-                    <div class="story_chart">
+                    <div class="story_chart" style="transform: translateY(0px)">
                         <div class="storycircle clearfix">
                             <div class="circle">
                                 <div class="symbol">
@@ -865,6 +881,26 @@
                             <!-- //Group 3-->
                         </div>
                     </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- Working with icons -->
                 </div>
             </div>
         </div>
@@ -911,16 +947,17 @@
     <script src="assets/js/ie-checker.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/lightgallery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script>
 
         //검색
-        $("#inpt_search").on('focus', function () {
-            $(this).parent('label').addClass('active');
+        $(".input").focus(function() {
+            $(".close-btn").addClass("active");
         });
-        
-        $("#inpt_search").on('blur', function () {
-            if($(this).val().length == 0)
-                $(this).parent('label').removeClass('active');
+
+        $(".input").focusout(function() {
+            $(".close-btn").removeClass("active");
+            $(this).val("");
         });
 
         //공고 리스트(public_chart)
@@ -963,7 +1000,6 @@
         
         //스토리 리스트
         
-
         //공고 리스트 배너 슬라이드
         var mySwiper = new Swiper('.swiper-container2', {
         autoplay: {
