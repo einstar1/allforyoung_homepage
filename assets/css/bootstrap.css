@@ -307,9 +307,8 @@ output {
 }
 .form-control {
   display: block;
-  width: 100%;
   height: 34px;
-  padding: 6px 12px;
+  padding: 6px 0;
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
@@ -840,6 +839,11 @@ fieldset[disabled] .btn-default.active {
 .btn-default .badge {
   color: #fff;
   background-color: #333;
+}
+.btn-loginbox {
+  color:#fff;
+  background-color: #ff3469;
+  width: 100%;
 }
 .btn-primary {
   color: #fff;
@@ -3516,6 +3520,7 @@ button.close {
   margin: 10px;
 }
 .modal-content {
+  display: inline-block;
   position: relative;
   background-color: #fff;
   -webkit-background-clip: padding-box;
@@ -3544,7 +3549,7 @@ button.close {
 }
 .modal-header {
   min-height: 16.42857143px;
-  padding: 15px;
+  padding: 15px 15px 0 15px;
 }
 .modal-header .close {
   margin-top: -2px;
@@ -3556,6 +3561,10 @@ button.close {
 .modal-body {
   position: relative;
   padding: 15px;
+}
+.modal-body input {
+  margin-bottom: 10px;
+  padding: 0 10px;
 }
 .modal-footer {
   padding: 15px;
@@ -3583,6 +3592,15 @@ button.close {
   color: #ff3469;
   font-size:25px;
   font-weight: 700;
+  margin-bottom: 8px;
+}
+.modal-advertise {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+}
+.link-signin {
+  color:#ff3469;
 }
 @media (min-width: 768px) {
   .modal-dialog {

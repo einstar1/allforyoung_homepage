@@ -170,7 +170,6 @@ body.modal_on {overflow: hidden;}
 .question {width: 220px; height: 50px; background-color: #ff3469; box-shadow: 0 2px 4px; cursor: pointer;}
 .question h3 {display: inline-block; font-size: 25px; font-weight: 700; color: #fff;}
 
-
 /* 미디어쿼리 */
 @media (max-width: 1290px){
     .container {width: 100%;}
