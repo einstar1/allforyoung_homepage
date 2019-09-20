@@ -12,4 +12,4 @@ class Post (models.Model):
     autor = models.ForeignKey(User, on_delete=True)
 
     def __str__(self):
-        return '{}::{}'.format(self.title.self.deadline)
+        return '{}::{}'.format(self.title, self.deadline)
