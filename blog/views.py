@@ -11,8 +11,7 @@ class PostList(ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(PostList, self).get_context_data(**kwargs)
         context['category_list'] = Category.objects.all()
-        context['post_without_category'] = Post.objects.filter(category=None).conunt()
-
+        
         return context
 
 
