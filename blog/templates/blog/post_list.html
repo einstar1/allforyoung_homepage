@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -10,11 +11,19 @@
     <title>대외활동의 모든 것</title>
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="assets/icons/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
+    <link rel="shortcut icon" href="{% static 'blog/assets/icons/favicon.ico' %}">
+    <link rel="apple-touch-icon-precomposed" href="{% static 'blog/assets/icons/favicon_72.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="96x96" href="{% static 'blog/assets/icons/favicon_96.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'blog/assets/icons/favicon_144.png' %}" />
+    <link rel="apple-touch-icon-precomposed" sizes="192x192" href="{% static 'blog/assets/icons/favicon_192.png' %}" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'blog/assets/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/assets/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/assets/css/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/assets/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/assets/css/bootstrap.css' %}">
+
 
     <!-- 웹 폰트 -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
@@ -26,13 +35,235 @@
          alert("현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!");
       </script>
    ![endif]-->
-    <title>Title</title>
 </head>
 <body>
-{% for p in object_list %}
-<h3>{{ p.title }}</h3>
-<h4>{{ p.organization }} {{p.birthline }} - {{ p.deadline }}</h4>
-<h5>{{ p.tag }}</h5>
-{% endfor %}
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1>
+                        <a href="index2.html">
+                            <em><img src="{% static 'blog/assets/img/logo.png' %}" alt="ALLFORYOUNG"></em>
+                            <strong><img src="{% static 'blog/assets/img/logo_sub.png' %}" alt="요즘것들"></strong>
+                        </a>
+                    </h1>
+                    <nav id="mNav">
+                        <h2 class="ir_so">요즘것들 전체메뉴</h2>
+                        <a href="#" class="ham"><span></span></a>
+                    </nav>
+                    <div class="wrapper">
+                        <input type="text" class="input" placeholder="Search">
+                        <div class="close-btn">&times;</div>
+                    </div>
+                    <!-- //search  -->
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="#exampleModalCenter" class="btn-login" data-toggle="modal" data-target="#exampleModalCenter">로그인</a></li>
+                            <li class="partnership"><a href="manage.html">제휴문의</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header  -->
+
+     <section id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="menu clearfix">
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li class="active"><a href="#">전체</a></li>
+                            <li><a href="#">대외활동</a></li>
+                            <li><a href="#">공모전</a></li>
+                            <li><a href="#">동아리</a></li>
+                            <li><a href="#">인턴</a></li>
+                            <li><a href="#">게시판</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  //menu  -->
+    
+    <section id="banner">
+        <div class="slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ss1">
+                        <div class="container">
+                            <div class="row">
+                                <h2>환경창업대전 <em>ECO START-UP Challenge</em></h2>
+                                <p>지구를 살릴 사람을 찾습니다</p>
+                            </div>
+                        </div>
+                        <h2 class="ir_so">슬라이드 메뉴</h2>
+                        <div class="banner_menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="bm_left">
+                                        <ul>
+                                            <li class="white"><a href="http://www.ecostartup.kr/" target="_blank">지원하기</a></li>
+                                            <li class="pink"><a href="#">게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ss2">
+                        <div class="container">
+                            <div class="row">
+                                <h2>희망공부방 <em>대학생 선생님 상시 모집</em></h2>
+                                <p>아이들의 선생님이 되어주세요</p>
+                            </div>
+                        </div>
+                        <h2 class="ir_so">슬라이드 메뉴</h2>
+                        <div class="banner_menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="bm_left">
+                                        <ul>
+                                            <li class="white"><a href="http://www.hopestudy.co.kr/" target="_blank">지원하기</a></li>
+                                            <li class="pink"><a href="#">게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ss3">
+                        <div class="container">
+                            <div class="row">
+                                <h2>KOICA <em>국민서포터즈</em></h2>
+                                <p>WEKO 모여라</p>
+                            </div>
+                        </div>
+                        <h2 class="ir_so">슬라이드 메뉴</h2>
+                        <div class="banner_menu">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="bm_left">
+                                        <ul>
+                                            <li class="white"><a href="http://www.koicaweko.co.kr/" target="_blank">지원하기</a></li>
+                                            <li class="pink"><a href="#">게시판</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner  --> 
+
+    <section id="public">
+        <div class="container_public">
+            <div class="row">
+                <div class="public">
+                    <h2 class="ir_so">공고 리스트</h2>
+                    <div class="public_title">
+                       <h2>전체활동</h2>
+                    </div>
+                    <div class="public_chart">
+                        <div class="chart_cont1">
+                            {% if object_list.exists %}
+                                {% for p in object_list %}
+                                <div class="lightbox clearfix">
+                                    <div class="box">
+                                        <div class="poster">
+                                            <figure>
+                                            {% if p.image %}
+                                                <a href="{{ p.link }}"><img src="{{ p.image.url }}" alt={{ p.title }}></a>
+                                            {% else %}
+                                                <a href="{{ p.link }}"><img src="{{ p.image.url }}" alt={{ p.title }}></a>
+                                            {% endif %}
+                                            </figure>
+                                        </div>
+                                        <div class="infor">
+                                            <h3><em>{{ p.title }}</em> <strong>D-13</strong></h3>
+                                            <h4><em>{{ p.organization }} | 2019.09.01~2019.09.15</em></h4>
+                                            <div class="infor_tag">
+                                                <a href="#">#IT</a>
+                                                <a href="#">#코딩</a>
+                                                <a href="#">#교육봉사</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            {% else %}
+                                <h3>아직 게시물이 없습니다.</h3>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div id="footer_infor">
+            <div class="container">
+                <div class="row">
+                    <div class="footer_infor">
+                        <h2><img src="{% static 'blog/assets/img/logo_footer.png' %}" alt="MAYCAN"></h2>
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">채용정보</a></li>
+                            <li><a href="#">제휴/광고/부대사업 문의</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                        </ul>
+                        <address>
+                            <p>서울특별시 강남구 논현로 813, 4층 (논현동, 어반라이트빌딩)<br><span class="bar2">대표자명 이건엽</span> 개인정보보호 책임자 총괄이사 박주영<br><span class="bar2">사업자등록번호 000-00-00000</span> 통신판매업신고번호 제 000호</p>
+                            <p>Copyright 2019 by Maycan Inc. All right reserved</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- 자바스크립트 라이브러리 -->
+    <script src="{% static 'blog/assets/js/jquery.min_1.12.4.js' %}"></script>
+    <script src="{% static 'blog/assets/js/modernizr-custom.js' %}"></script>
+    <script src="{% static 'blog/assets/js/ie-checker.js' %}"></script>
+    <script src="{% static 'blog/assets/js/swiper.min.js' %}"></script>
+    <script src="{% static 'blog/assets/js/lightgallery.min.js' %}"></script>
+    <script src="{% static 'blog/assets/js/bootstrap.js' %}"></script>
+    <script>
+         //공고 리스트(public_chart)
+        $(".chart_cont1").lightGallery({
+            selector: '.poster',
+        });
+
+        //배너 이미지 슬라이드
+        var mySwiper = new Swiper ('.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            autoplay: {
+                delay: 5000,
+            },
+            
+        });
+    </script>
 </body>
 </html>
